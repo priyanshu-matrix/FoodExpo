@@ -4,14 +4,14 @@ const cors = require("cors");
 const { OpenAI } = require("openai");
 
 const app = express();
-const PORT = process.env.PORT ||3001;
+const PORT = 3001;
 
 app.use(cors());
 app.use(express.json());
 
 const api = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-  baseURL: process.env.OPENAI_API_BASE_URL,
+  apiKey: process.env.AI_API_KEY,
+  baseURL: process.env.BASE_URL,
 });
 
 // API endpoint for AI chat
