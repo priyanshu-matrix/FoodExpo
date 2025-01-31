@@ -70,16 +70,15 @@ function App() {
                 Welcome to FoodExpo
               </h1>
               <div className="container">
-
-              <p>
-                Embark on a culinary journey that adapts to your mood and
-                cultural cravings. Discover authentic dishes from around the
-                world, from comforting street food to elegant fine dining
-                experiences. Whether you're seeking the spicy flavors of Asia,
-                the hearty traditions of Europe, or the vibrant tastes of Latin
-                America, let us guide you to the perfect meal that matches your
-                current state of mind and cultural preferences.
-              </p>
+                <p>
+                  Embark on a culinary journey that adapts to your mood and
+                  cultural cravings. Discover authentic dishes from around the
+                  world, from comforting street food to elegant fine dining
+                  experiences. Whether you're seeking the spicy flavors of Asia,
+                  the hearty traditions of Europe, or the vibrant tastes of
+                  Latin America, let us guide you to the perfect meal that
+                  matches your current state of mind and cultural preferences.
+                </p>
               </div>
             </div>
           </ParallaxLayer>
@@ -95,15 +94,20 @@ function App() {
                 alignItems: "center",
               }}
             >
-              <h2 style={{ textAlign: "center", paddingTop: "40vh" }}>
-                Page Two
-              </h2>
+              <div className="container">
+                <h3 style={{ textAlign: "center", paddingTop: "40vh" }}>
+                  Tell us how you feel, and let AI guide your culinary journey.
+                  Whether you're stressed, happy, energetic, or seeking comfort,
+                  we'll suggest the perfect dishes to complement your mood and
+                  satisfy your cravings.
+                </h3>
+              </div>
               <div className="container my-5">
                 <div
                   id="chat"
                   style={{ textAlign: "center", marginTop: "20px" }}
                 >
-                  <h1 style={{ color: "white" }}> Ask AI </h1>
+                  <h1 style={{ color: "white" }}><b>Mistral-7B-Instruct-v0.2</b></h1>
                   <textarea
                     rows="3"
                     cols="50"
@@ -118,7 +122,12 @@ function App() {
                     }}
                   />
                   <br />
-                  <button className="btn btn-outline-light my-3" onClick={sendMessage}>Ask AI</button>
+                  <button
+                    className="btn btn-outline-light my-3"
+                    onClick={sendMessage}
+                  >
+                    Ask AI
+                  </button>
                 </div>
                 <div>
                   <style>
@@ -166,11 +175,19 @@ function App() {
                 height: "100vh",
                 width: "100%",
                 background: "lightpink",
+                backgroundImage: "linear-gradient(to bottom, black, grey)",
               }}
             >
-              <h2 style={{ textAlign: "center", paddingTop: "40vh" }}>
-                Page Three
-              </h2>
+              <h3 style={{ textAlign: "center", paddingTop: "40vh" }}>
+                <>
+                  <div style={{ color: 'white', maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
+                    <h3><u>About the Developer</u></h3>
+                    <p>Priyanshu Kumar Pandey</p>
+                    <p>This project is licensed under the MIT License</p>
+                    <p>For queries: <a href="mailto:priyanshupandey44449@gmail.com" style={{ color: 'white', textDecoration: 'underline' }}>Contact Me</a></p>
+                  </div>
+                </>
+              </h3>
             </div>
             <footer
               style={{
